@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pila2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Abdiel
+ */
+public class Pila2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+             Scanner sc = new Scanner  (System.in);
+        int opt, tope = 0, tam ;
+        System.out.println("ingresar el tamaño de la pila");
+        int[] pila= new int [tam =sc.nextInt()];
+        do{
+            System.out.println("\n1 - agregar\n"
+                    + "2 - mostrar\n"
+                    + "3 - eliminar\n"
+                    + "4 - salir\n");
+            switch(opt = sc.nextInt ()){
+                case 1: 
+                    if (tope < tam){
+                    System.out.println("ingresa una letra");
+                    pila[tope]=sc.nextInt();
+                    tope++;
+                    } else { System.out.println("pila llena...");}
+                    break;
+                case 2:
+                    if (tope  > 0){
+                    for(int i= tope-1 ; i >=0 ; i--){
+                        System.out.println("   "+pila[i]);
+                    }}else {System.out.println("pila vacia...");}
+                    break;
+                case 3:
+                    if (tope > 0){
+                    System.out.println("dato eliminado...");
+                    tope--;
+                    }else {System.out.println("pila vacia...");}
+                    break;
+                    
+            }
+            
+        }while (opt != 5);
+    }
+    
+}
